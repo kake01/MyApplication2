@@ -33,7 +33,12 @@ public class MyView extends View
 
         //四角
         paint.setColor(Color.argb(255,2,1,2));
-        canvas.drawRect(300,800,600,1000,paint);
+        canvas.drawRect(400,800,600,1000,paint);
 
+        //線
+        paint.setColor(Color.GREEN);
+        paint.setStrokeWidth(10);
+        canvas.drawLine(0,0, canvas.getWidth(), canvas.getHeight(),paint);
+        canvas.drawLine(0, canvas.getHeight(), canvas.getWidth(),0,paint);
     }
 }
