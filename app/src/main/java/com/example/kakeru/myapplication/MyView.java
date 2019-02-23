@@ -53,10 +53,20 @@ public class MyView extends View
         path.reset();
 
         path.moveTo(0,0);
-        //これいいのか?
         path.lineTo(0,canvas.getHeight());
         path.lineTo(canvas.getWidth()/2,canvas.getHeight()/2);
         path.lineTo(0,0);
         canvas.drawPath(path,paint);
+
+
+        //国旗(日本)
+//        canvas.drawColor(Color.WHITE);
+        paint.setStyle(Paint.Style.FILL);
+        paint.setColor(Color.WHITE);
+        canvas.drawRect(canvas.getWidth()/3,canvas.getHeight()/3,canvas.getWidth()*2/3,canvas.getHeight()*2/3,paint);
+        paint.setColor(Color.rgb(190, 0, 63));
+        canvas.drawCircle(canvas.getWidth()/2,canvas.getHeight()/2,50, paint);
+
+
     }
 }
