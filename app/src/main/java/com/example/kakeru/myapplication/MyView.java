@@ -1,6 +1,8 @@
 package com.example.kakeru.myapplication;
 
 import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
 import android.view.View;
 
 public class MyView extends View
@@ -10,4 +12,12 @@ public class MyView extends View
     {
         super(con);
     }
+
+    //描画の処理
+    @Override
+    protected void onDraw(Canvas canvas)
+    {
+        canvas.drawColor(Color.BLUE);
+    }
+
 }
